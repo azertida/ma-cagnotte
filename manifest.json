@@ -1,0 +1,21 @@
+{
+  "name": "Ma Cagnotte",
+  "short_name": "Ma Cagnotte",
+  "description": "Vos petites économies mises de côté, jusqu'au Jour J",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F6F1E7",
+  "theme_color": "#F6F1E7",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "lang": "fr-FR",
+  "dir": "ltr"
+}

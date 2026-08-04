@@ -12,6 +12,7 @@
 <meta name="theme-color" content="#F6F1E7">
 <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
 <link rel="icon" type="image/png" href="icon.png">
+<link rel="manifest" href="manifest.json">
 
 <style>
 /* Polices auto-hébergées — sous-ensemble latin, aucune requête externe */
@@ -676,6 +677,16 @@ function toutEffacer() {
 charger();
 document.getElementById('inJourJ').value = config.jourJ || '';
 rafraichir();
+</script>
+
+<script>
+/* Enregistrement du service worker (mode hors-ligne) */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .catch(err => console.log('Service worker :', err));
+  });
+}
 </script>
 </body>
 </html>
